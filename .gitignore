@@ -1,0 +1,40 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.g.dart
+*.freezed.dart
+
+# Android
+**/android/key.properties
+**/android/app/upload-keystore.jks
+**/android/.gradle/
+**/android/local.properties
+
+# iOS
+**/ios/.symlinks/
+**/ios/Flutter/.last_build_id
+**/ios/Pods/
+**/ios/Runner.xcworkspace/xcuserdata/
+**/ios/.generated/
+
+# macOS
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Web
+lib/generated_plugin_registrant.dart
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive
+local.properties
+*.env

@@ -1,0 +1,45 @@
+name: crypto_tracker
+description: Real-time cryptocurrency price tracker with Binance integration and price alerts.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # WebSocket & HTTP
+  web_socket_channel: ^2.4.0
+  http: ^1.2.1
+
+  # Notifications
+  flutter_local_notifications: ^17.2.4
+
+  # Background tasks (price monitoring when app is closed)
+  workmanager: ^0.5.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Local storage
+  shared_preferences: ^2.3.2
+
+  # Charts
+  fl_chart: ^0.69.0
+
+  # Permissions
+  permission_handler: ^11.3.1
+
+  # Utilities
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
