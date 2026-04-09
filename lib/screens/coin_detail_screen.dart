@@ -100,7 +100,7 @@ class _CoinDetailScreenState extends State<CoinDetailScreen>
                 shape: BoxShape.circle,
                 gradient: RadialGradient(
                   colors: [
-                    coinColor.withOpacity(0.12),
+                    coinColor.withValues(alpha:0.12),
                     Colors.transparent,
                   ],
                 ),
@@ -188,7 +188,7 @@ class _CoinDetailScreenState extends State<CoinDetailScreen>
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
           child: Container(
-            color: AppTheme.bgPrimary.withOpacity(0.75),
+            color: AppTheme.bgPrimary.withValues(alpha:0.75),
           ),
         ),
       ),
@@ -212,11 +212,11 @@ class _CoinDetailScreenState extends State<CoinDetailScreen>
             height: 30,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: coinColor.withOpacity(0.18),
-              border: Border.all(color: coinColor.withOpacity(0.4), width: 1),
+              color: coinColor.withValues(alpha:0.18),
+              border: Border.all(color: coinColor.withValues(alpha:0.4), width: 1),
               boxShadow: [
                 BoxShadow(
-                    color: coinColor.withOpacity(0.2), blurRadius: 8)
+                    color: coinColor.withValues(alpha:0.2), blurRadius: 8)
               ],
             ),
             child: Center(
@@ -288,9 +288,9 @@ class _PriceHero extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               decoration: BoxDecoration(
-                color: priceColor.withOpacity(0.12),
+                color: priceColor.withValues(alpha:0.12),
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: priceColor.withOpacity(0.25)),
+                border: Border.all(color: priceColor.withValues(alpha:0.25)),
               ),
               child: Row(
                 children: [
@@ -364,7 +364,7 @@ class _IntervalRow extends StatelessWidget {
               boxShadow: active
                   ? [
                       BoxShadow(
-                        color: AppTheme.accentTeal.withOpacity(0.3),
+                        color: AppTheme.accentTeal.withValues(alpha:0.3),
                         blurRadius: 12,
                       )
                     ]
@@ -420,7 +420,7 @@ class _ChartContainer extends StatelessWidget {
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
                   valueColor:
-                      AlwaysStoppedAnimation(lineColor.withOpacity(0.7)),
+                      AlwaysStoppedAnimation(lineColor.withValues(alpha:0.7)),
                 ),
               ),
             )
@@ -508,16 +508,16 @@ class _ChartContainer extends StatelessWidget {
             color: lineColor,
             barWidth: 1.8,
             dotData: const FlDotData(show: false),
-            shadow: Shadow(color: lineColor.withOpacity(0.25), blurRadius: 8),
+            shadow: Shadow(color: lineColor.withValues(alpha:0.25), blurRadius: 8),
             belowBarData: BarAreaData(
               show: true,
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  lineColor.withOpacity(0.22),
-                  lineColor.withOpacity(0.04),
-                  lineColor.withOpacity(0.0),
+                  lineColor.withValues(alpha:0.22),
+                  lineColor.withValues(alpha:0.04),
+                  lineColor.withValues(alpha:0.0),
                 ],
                 stops: const [0.0, 0.6, 1.0],
               ),
@@ -685,7 +685,7 @@ class _StatCard extends StatelessWidget {
             width: 32,
             height: 32,
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha:0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: color, size: 15),
@@ -765,14 +765,14 @@ class _MiniAlertCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppTheme.bgCard,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2), width: 0.8),
+        border: Border.all(color: color.withValues(alpha:0.2), width: 0.8),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha:0.1),
               borderRadius: BorderRadius.circular(6),
             ),
             child: Text(
@@ -836,7 +836,7 @@ class _SetAlertFab extends StatelessWidget {
           gradient: AppTheme.primaryGradient,
           boxShadow: [
             BoxShadow(
-              color: AppTheme.accentTeal.withOpacity(0.45),
+              color: AppTheme.accentTeal.withValues(alpha:0.45),
               blurRadius: 20,
               offset: const Offset(0, 6),
             ),

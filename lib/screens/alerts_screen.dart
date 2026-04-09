@@ -20,7 +20,7 @@ class AlertsScreen extends StatelessWidget {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
             child: AppBar(
-              backgroundColor: AppTheme.bgPrimary.withOpacity(0.7),
+              backgroundColor: AppTheme.bgPrimary.withValues(alpha:0.7),
               title: Row(
                 children: [
                   ShaderMask(
@@ -40,7 +40,7 @@ class AlertsScreen extends StatelessWidget {
                     if (!has) return const SizedBox.shrink();
                     return TextButton.icon(
                       onPressed: p.clearTriggeredAlerts,
-                      icon: const Icon(Icons.sweep_rounded,
+                      icon: const Icon(Icons.rounded_corner,
                           size: 14, color: AppTheme.textMuted),
                       label: const Text(
                         'Clear',
@@ -85,12 +85,12 @@ class _EmptyState extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  AppTheme.accentTeal.withOpacity(0.15),
-                  AppTheme.accentTeal.withOpacity(0.03),
+                  AppTheme.accentTeal.withValues(alpha:0.15),
+                  AppTheme.accentTeal.withValues(alpha:0.03),
                 ],
               ),
               border: Border.all(
-                  color: AppTheme.accentTeal.withOpacity(0.25), width: 1.5),
+                  color: AppTheme.accentTeal.withValues(alpha:0.25), width: 1.5),
             ),
             child: const Icon(
               Icons.notifications_none_rounded,
@@ -228,9 +228,9 @@ class _SChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.08),
+        color: color.withValues(alpha:0.08),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: color.withOpacity(0.2), width: 0.8),
+        border: Border.all(color: color.withValues(alpha:0.2), width: 0.8),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -281,7 +281,7 @@ class _CoinAlertGroup extends StatelessWidget {
         border: Border.all(color: AppTheme.borderSubtle, width: 0.8),
         boxShadow: [
           BoxShadow(
-              color: Colors.black.withOpacity(0.2), blurRadius: 16,
+              color: Colors.black.withValues(alpha:0.2), blurRadius: 16,
               offset: const Offset(0, 4)),
         ],
       ),
@@ -299,15 +299,15 @@ class _CoinAlertGroup extends StatelessWidget {
                     shape: BoxShape.circle,
                     gradient: RadialGradient(
                       colors: [
-                        coinColor.withOpacity(0.22),
-                        coinColor.withOpacity(0.05),
+                        coinColor.withValues(alpha:0.22),
+                        coinColor.withValues(alpha:0.05),
                       ],
                     ),
                     border: Border.all(
-                        color: coinColor.withOpacity(0.4), width: 1),
+                        color: coinColor.withValues(alpha:0.4), width: 1),
                     boxShadow: [
                       BoxShadow(
-                          color: coinColor.withOpacity(0.2), blurRadius: 8)
+                          color: coinColor.withValues(alpha:0.2), blurRadius: 8)
                     ],
                   ),
                   child: Center(
@@ -431,7 +431,7 @@ class _CoinAlertGroup extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor:
-                            AppTheme.priceDown.withOpacity(0.15),
+                            AppTheme.priceDown.withValues(alpha:0.15),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
                       ),
@@ -498,10 +498,10 @@ class _AlertRow extends StatelessWidget {
             width: 36,
             height: 36,
             decoration: BoxDecoration(
-              color: condColor.withOpacity(0.08),
+              color: condColor.withValues(alpha:0.08),
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                  color: condColor.withOpacity(0.2), width: 0.8),
+                  color: condColor.withValues(alpha:0.2), width: 0.8),
             ),
             child: Icon(
               isAbove
@@ -534,7 +534,7 @@ class _AlertRow extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 6, vertical: 2),
                       decoration: BoxDecoration(
-                        color: statusColor.withOpacity(0.12),
+                        color: statusColor.withValues(alpha:0.12),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
@@ -570,11 +570,11 @@ class _AlertRow extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: alert.isActive
-                      ? AppTheme.accentTeal.withOpacity(0.2)
+                      ? AppTheme.accentTeal.withValues(alpha:0.2)
                       : AppTheme.bgCardAlt,
                   border: Border.all(
                     color: alert.isActive
-                        ? AppTheme.accentTeal.withOpacity(0.6)
+                        ? AppTheme.accentTeal.withValues(alpha:0.6)
                         : AppTheme.borderSubtle,
                     width: 1,
                   ),
@@ -599,7 +599,7 @@ class _AlertRow extends StatelessWidget {
                           boxShadow: alert.isActive
                               ? [
                                   BoxShadow(
-                                    color: AppTheme.accentTeal.withOpacity(0.6),
+                                    color: AppTheme.accentTeal.withValues(alpha:0.6),
                                     blurRadius: 6,
                                   )
                                 ]

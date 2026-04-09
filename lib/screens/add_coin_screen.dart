@@ -69,7 +69,7 @@ class _AddCoinScreenState extends State<AddCoinScreen> {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
             child: AppBar(
-              backgroundColor: AppTheme.bgPrimary.withOpacity(0.7),
+              backgroundColor: AppTheme.bgPrimary.withValues(alpha:0.7),
               leading: GestureDetector(
                 onTap: () => Navigator.pop(context),
                 child: Container(
@@ -163,7 +163,7 @@ class _AddCoinScreenState extends State<AddCoinScreen> {
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
                             valueColor: AlwaysStoppedAnimation(
-                                AppTheme.accentTeal.withOpacity(0.8)),
+                                AppTheme.accentTeal.withValues(alpha:0.8)),
                           ),
                         ),
                         const SizedBox(height: 14),
@@ -179,7 +179,7 @@ class _AddCoinScreenState extends State<AddCoinScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.search_off_rounded,
-                                color: AppTheme.textMuted.withOpacity(0.4),
+                                color: AppTheme.textMuted.withValues(alpha:0.4),
                                 size: 48),
                             const SizedBox(height: 12),
                             const Text('No results',
@@ -282,15 +282,15 @@ class _CoinRow extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  coinColor.withOpacity(0.2),
-                  coinColor.withOpacity(0.05),
+                  coinColor.withValues(alpha:0.2),
+                  coinColor.withValues(alpha:0.05),
                 ],
               ),
               border:
-                  Border.all(color: coinColor.withOpacity(0.35), width: 1),
+                  Border.all(color: coinColor.withValues(alpha:0.35), width: 1),
               boxShadow: [
                 BoxShadow(
-                    color: coinColor.withOpacity(0.15), blurRadius: 8)
+                    color: coinColor.withValues(alpha:0.15), blurRadius: 8)
               ],
             ),
             child: Center(
@@ -330,10 +330,10 @@ class _CoinRow extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: AppTheme.accentTeal.withOpacity(0.08),
+                    color: AppTheme.accentTeal.withValues(alpha:0.08),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                        color: AppTheme.accentTeal.withOpacity(0.25),
+                        color: AppTheme.accentTeal.withValues(alpha:0.25),
                         width: 0.8),
                   ),
                   child: Row(
@@ -360,7 +360,7 @@ class _CoinRow extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       boxShadow: [
                         BoxShadow(
-                          color: AppTheme.accentTeal.withOpacity(0.3),
+                          color: AppTheme.accentTeal.withValues(alpha:0.3),
                           blurRadius: 10,
                         ),
                       ],

@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:web_socket_channel/web_socket_channel.dart';
-import '../models/coin_model.dart';
 
 class BinanceService {
   static const String _wsBase = 'wss://stream.binance.com:9443/stream';

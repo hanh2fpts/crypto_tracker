@@ -86,7 +86,7 @@ class _GlassBottomNav extends StatelessWidget {
         child: Container(
           height: 72 + MediaQuery.of(context).padding.bottom,
           decoration: BoxDecoration(
-            color: AppTheme.bgCard.withOpacity(0.85),
+            color: AppTheme.bgCard.withValues(alpha:0.85),
             border: const Border(
               top: BorderSide(color: AppTheme.borderSubtle, width: 0.8),
             ),
@@ -114,7 +114,7 @@ class _GlassBottomNav extends StatelessWidget {
                   badge: Consumer<CryptoProvider>(
                     builder: (_, p, __) {
                       final c = p.activeAlertsCount;
-                      return c > 0 ? c.toString() : '';
+                      return c > 0 ? Text(c.toString()) : const SizedBox.shrink();
                     },
                   ),
                 ),
@@ -171,7 +171,7 @@ class _NavItem extends StatelessWidget {
                 boxShadow: selected
                     ? [
                         BoxShadow(
-                          color: AppTheme.accentTeal.withOpacity(0.7),
+                          color: AppTheme.accentTeal.withValues(alpha:0.7),
                           blurRadius: 8,
                         )
                       ]

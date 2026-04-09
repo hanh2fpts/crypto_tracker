@@ -69,7 +69,7 @@ class _SetAlertBottomSheetState extends State<SetAlertBottomSheet>
           filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
           child: Container(
             decoration: BoxDecoration(
-              color: AppTheme.bgCard.withOpacity(0.95),
+              color: AppTheme.bgCard.withValues(alpha:0.95),
               borderRadius:
                   const BorderRadius.vertical(top: Radius.circular(24)),
               border: const Border(
@@ -142,14 +142,14 @@ class _CoinHeader extends StatelessWidget {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                coinColor.withOpacity(0.25),
-                coinColor.withOpacity(0.06),
+                coinColor.withValues(alpha:0.25),
+                coinColor.withValues(alpha:0.06),
               ],
             ),
-            border: Border.all(color: coinColor.withOpacity(0.45), width: 1.2),
+            border: Border.all(color: coinColor.withValues(alpha:0.45), width: 1.2),
             boxShadow: [
               BoxShadow(
-                  color: coinColor.withOpacity(0.25), blurRadius: 14)
+                  color: coinColor.withValues(alpha:0.25), blurRadius: 14)
             ],
           ),
           child: Center(
@@ -266,14 +266,14 @@ class _CondBtn extends StatelessWidget {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 14),
           decoration: BoxDecoration(
-            color: selected ? color.withOpacity(0.1) : AppTheme.bgCardAlt,
+            color: selected ? color.withValues(alpha:0.1) : AppTheme.bgCardAlt,
             borderRadius: BorderRadius.circular(14),
             border: Border.all(
-              color: selected ? color.withOpacity(0.6) : AppTheme.borderSubtle,
+              color: selected ? color.withValues(alpha:0.6) : AppTheme.borderSubtle,
               width: selected ? 1.2 : 0.8,
             ),
             boxShadow: selected
-                ? [BoxShadow(color: color.withOpacity(0.15), blurRadius: 12)]
+                ? [BoxShadow(color: color.withValues(alpha:0.15), blurRadius: 12)]
                 : null,
           ),
           child: Column(
@@ -383,7 +383,7 @@ class _SubmitButton extends StatelessWidget {
           ),
           boxShadow: [
             BoxShadow(
-              color: btnColor.withOpacity(0.4),
+              color: btnColor.withValues(alpha:0.4),
               blurRadius: 20,
               offset: const Offset(0, 6),
             ),

@@ -97,7 +97,7 @@ void main() async {
     constraints: Constraints(
       networkType: NetworkType.connected,
     ),
-    existingWorkPolicy: ExistingWorkPolicy.keep,
+    existingWorkPolicy: ExistingPeriodicWorkPolicy.keep,
   );
 
   runApp(const CryptoTrackerApp());

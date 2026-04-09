@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen>
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
           child: AppBar(
-            backgroundColor: AppTheme.bgPrimary.withOpacity(0.7),
+            backgroundColor: AppTheme.bgPrimary.withValues(alpha:0.7),
             title: _isSearching
                 ? TextField(
                     controller: _searchCtrl,
@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen>
                             color: AppTheme.priceUp,
                             boxShadow: [
                               BoxShadow(
-                                color: AppTheme.priceUp.withOpacity(
+                                color: AppTheme.priceUp.withValues(alpha:
                                     0.3 + 0.5 * _pulseCtrl.value),
                                 blurRadius: 6 + 6 * _pulseCtrl.value,
                               ),
@@ -148,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen>
                     gradient: AppTheme.primaryGradient,
                     boxShadow: [
                       BoxShadow(
-                        color: AppTheme.accentTeal.withOpacity(0.35),
+                        color: AppTheme.accentTeal.withValues(alpha:0.35),
                         blurRadius: 10,
                       ),
                     ],
@@ -185,7 +185,7 @@ class _HomeScreenState extends State<HomeScreen>
                       colors: [
                         AppTheme.accentTeal,
                         AppTheme.accentBlue,
-                        AppTheme.accentTeal.withOpacity(0),
+                        AppTheme.accentTeal.withValues(alpha:0),
                       ],
                     ),
                   ),
@@ -258,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen>
                     padding: const EdgeInsets.symmetric(
                         horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
-                      color: AppTheme.accentTeal.withOpacity(0.12),
+                      color: AppTheme.accentTeal.withValues(alpha:0.12),
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
@@ -283,7 +283,7 @@ class _HomeScreenState extends State<HomeScreen>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.candlestick_chart_outlined,
-                        color: AppTheme.textMuted.withOpacity(0.4), size: 60),
+                        color: AppTheme.textMuted.withValues(alpha:0.4), size: 60),
                     const SizedBox(height: 16),
                     const Text('No coins found',
                         style: TextStyle(
@@ -586,7 +586,7 @@ class _ConfirmDialog extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: confirmColor.withOpacity(0.15),
+                      backgroundColor: confirmColor.withValues(alpha:0.15),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12)),
                       padding: const EdgeInsets.symmetric(vertical: 12),

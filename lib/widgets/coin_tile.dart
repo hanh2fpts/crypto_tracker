@@ -33,7 +33,7 @@ class CoinTile extends StatelessWidget {
           border: Border.all(color: AppTheme.borderSubtle, width: 0.8),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.25),
+              color: Colors.black.withValues(alpha:0.25),
               blurRadius: 16,
               offset: const Offset(0, 4),
             ),
@@ -131,14 +131,14 @@ class _CoinAvatar extends StatelessWidget {
           center: Alignment.topLeft,
           radius: 1.2,
           colors: [
-            coinColor.withOpacity(0.22),
-            coinColor.withOpacity(0.06),
+            coinColor.withValues(alpha:0.22),
+            coinColor.withValues(alpha:0.06),
           ],
         ),
-        border: Border.all(color: coinColor.withOpacity(0.45), width: 1.2),
+        border: Border.all(color: coinColor.withValues(alpha:0.45), width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: coinColor.withOpacity(0.25),
+            color: coinColor.withValues(alpha:0.25),
             blurRadius: 14,
             spreadRadius: -2,
           ),
@@ -173,9 +173,9 @@ class _ChangeBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.12),
+        color: color.withValues(alpha:0.12),
         borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: color.withOpacity(0.25), width: 0.5),
+        border: Border.all(color: color.withValues(alpha:0.25), width: 0.5),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -259,7 +259,7 @@ class _SparklinePainter extends CustomPainter {
     canvas.drawPath(
       path,
       Paint()
-        ..color = color.withOpacity(0.18)
+        ..color = color.withValues(alpha:0.18)
         ..strokeWidth = 5
         ..style = PaintingStyle.stroke
         ..strokeCap = StrokeCap.round
@@ -289,7 +289,7 @@ class _SparklinePainter extends CustomPainter {
         ..shader = LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [color.withOpacity(0.28), color.withOpacity(0.0)],
+          colors: [color.withValues(alpha:0.28), color.withValues(alpha:0.0)],
         ).createShader(Rect.fromLTWH(0, 0, size.width, size.height)),
     );
   }

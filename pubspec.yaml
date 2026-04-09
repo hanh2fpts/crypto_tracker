@@ -18,7 +18,7 @@ dependencies:
   flutter_local_notifications: ^17.2.4
 
   # Background tasks (price monitoring when app is closed)
-  workmanager: ^0.5.2
+  workmanager: ^0.9.0
 
   # State management
   provider: ^6.1.2
